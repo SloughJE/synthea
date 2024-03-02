@@ -1,3 +1,44 @@
+# Synthea Data Pipeline
+
+This document outlines the usage of `run_pipelines.py` for generating, combining, and converting synthetic patient data using Synthea.
+
+## Prerequisites
+Note that Synthea only generates one patient at a time when generating a patient from a random state. 
+
+## Usage
+
+Run the script from the command line, specifying one or more of the following options to perform the desired actions:
+
+- `--generate_patients`: Generates synthetic patient data. set the number of "states" or patients. 
+- `--combine_output_csvs`: Combines generated CSV files into a single directory.
+- `--convert_to_pickle`: Converts all CSV files in a specified directory to pickle format for efficient processing.
+
+### Generate Synthetic Patient Data
+
+```bash
+python run_pipelines.py --generate_patients
+```
+
+### Combine Generated CSV Files
+
+```bash
+python run_pipelines.py --combine_output_csvs
+```
+
+### Convert CSV Files to Pickle Format
+
+```bash
+python run_pipelines.py --convert_to_pickle
+```
+
+### Full Example
+
+To generate patient data, combine CSV outputs, and convert them to pickle, run:
+
+```bash
+python run_pipelines.py --generate_patients --combine_output_csvs --convert_to_pickle
+```
+
 # Synthea<sup>TM</sup> Patient Generator ![Build Status](https://github.com/synthetichealth/synthea/workflows/.github/workflows/ci-build-test.yml/badge.svg?branch=master) [![codecov](https://codecov.io/gh/synthetichealth/synthea/branch/master/graph/badge.svg)](https://codecov.io/gh/synthetichealth/synthea)
 
 Synthea<sup>TM</sup> is a Synthetic Patient Population Simulator. The goal is to output synthetic, realistic (but not real), patient data and associated health records in a variety of formats.
