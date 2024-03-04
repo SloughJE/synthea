@@ -2,7 +2,7 @@
 
 This document outlines the usage of `run_pipelines.py` for generating, combining, and converting synthetic patient data using Synthea.
 
-Note that Synthea only generates one patient at a time when generating a patient from a random state so we must process one patient at a time.
+Note that Synthea only generates one patient at a time when creating a patient from a random state. This takes time.
 Due to this, we parallelize the process.
 
 Parameters can be set in `params.txt`
