@@ -1,0 +1,14 @@
+{
+    "name": "Synthea Python Dev Container",
+    "dockerFile": "../Dockerfile",
+    "context": "..",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+    ],
+    "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+    "remoteUser": "root"
+}
